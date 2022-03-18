@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-image: linear-gradient(45deg, #faf, #acf);
+        }
+
+        .preserve {
+            width: 540px;
+            height: 540px;
+            position: relative;
+            perspective: 800px;
+
+        }
+
+        span {
+
+            font-size: 70px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .cube {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            transform: rotateX(45deg) rotateY(20deg);
+            animation: ani 16s alternate infinite;
+            transform-style: preserve-3d;
+        }
+
+        .box {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+
+        }
+
+        @keyframes ani {
+            0% {
+                transform: rotateX(45deg) rotateY(20deg) rotateZ(0deg);
+            }
+
+            50% {
+                transform: rotateX(45deg) rotateY(405deg) rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateX(45deg) rotateY(20deg) rotateZ(360deg);
+            }
+        }
+
+        .box1 {
+            transform: translate3d(105px, 0px, 0px);
+        }
+
+        .box2 {
+            transform: translate3d(0px, 0px, 0px);
+        }
+
+        .box3 {
+            transform: translate3d(-105px, 0px, 0px);
+        }
+
+        .box4 {
+            transform: translate3d(105px, 105px, 0px);
+        }
+
+        .box5 {
+            transform: translate3d(0px, 105px, 0px);
+        }
+
+        .box6 {
+            transform: translate3d(-105px, 105px, 0px);
+        }
+
+        .box7 {
+            transform: translate3d(105px, -105px, 0px);
+        }
+
+        .box8 {
+            transform: translate3d(0px, -105px, 0px);
+        }
+
+        .box9 {
+            transform: translate3d(-105px, -105px, 0px);
+        }
+
+
+        /* ================================================================== */
+        .box10 {
+            transform: translate3d(105px, 0px, -105px);
+        }
+
+        /* 中心 */
+        .box11 {
+            transform: translate3d(0px, 0px, -105px);
+        }
+
+        .box12 {
+            transform: translate3d(-105px, 0px, -105px);
+        }
+
+        .box13 {
+            transform: translate3d(105px, 105px, -105px);
+        }
+
+        .box14 {
+            transform: translate3d(0px, 105px, -105px);
+        }
+
+        .box15 {
+            transform: translate3d(-105px, 105px, -105px);
+        }
+
+        .box16 {
+            transform: translate3d(105px, -105px, -105px);
+        }
+
+        .box17 {
+            transform: translate3d(0px, -105px, -105px);
+        }
+
+        .box18 {
+            transform: translate3d(-105px, -105px, -105px);
+        }
+
+        /* --------------------------------------------- */
+
+        .box19 {
+            transform: translate3d(105px, 0px, 105px);
+        }
+
+
+        .box20 {
+            transform: translate3d(0px, 0px, 105px);
+        }
+
+        .box21 {
+            transform: translate3d(-105px, 0px, 105px);
+        }
+
+        .box22 {
+            transform: translate3d(105px, 105px, 105px);
+        }
+
+        .box23 {
+            transform: translate3d(0px, 105px, 105px);
+        }
+
+        .box24 {
+            transform: translate3d(-105px, 105px, 105px);
+        }
+
+        .box25 {
+            transform: translate3d(105px, -105px, 105px);
+        }
+
+        .box26 {
+            transform: translate3d(0px, -105px, 105px);
+        }
+
+        .box27 {
+            transform: translate3d(-105px, -105px, 105px);
+        }
+
+
+
+
+        .box>div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 200px;
+            text-align: center;
+            font-size: 50px;
+            color: #0008;
+            outline: 4px solid #000;
+            border-radius: 5px;
+            backface-visibility: hidden;
+
+        }
+
+        .box>.front {
+            transform: rotate(0deg) translateZ(50px);
+            background-color: blue;
+        }
+
+        .box>.back {
+            transform: rotateY(180deg) translateZ(50px);
+            background-color: green;
+        }
+
+        .box>.up {
+            transform: rotateX(90deg) translateZ(50px);
+            background-color: yellow;
+        }
+
+        .box>.down {
+            transform: rotateX(-90deg) translateZ(50px);
+            background-color: white;
+        }
+
+        .box>.right {
+            transform: rotateY(-90deg) translateZ(50px);
+            background-color: orange;
+        }
+
+        .box>.left {
+            transform: rotateY(90deg) translateZ(50px);
+            background-color: red;
+        }
+    </style>
+
+
+    <div class="preserve">
+        <div class="cube">
+            <div class="box box1">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box2">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box3">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box4">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box5">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box6">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box7">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box8">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box9">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+
+            <div class="box box10">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box11">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box12">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box13">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box14">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box15">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box16">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box17">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box18">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box19">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box20">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box21">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box22">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box23">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box24">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box25">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box26">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="box box27">
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+    </div>
+    <span>coding by All</span>
+
+
+</body>
+
+</html>
