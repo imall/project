@@ -38,10 +38,16 @@
             line-height: 160px;
             font-size: 50px;
             transition: .5s;
+            color: #222;
         }
 
-        .container [type="checkbox"]:checked+.item span {
-            color: lightblue;
+        .container [type="checkbox"]:checked+.item span i{
+            color: rgba(0,176,255,1);
+            text-shadow: 0 0 10px rgba(0,176,255,.8),
+                0 0 20px rgba(0,176,255,.8),
+                0 0 30px rgba(0,176,255,.8),
+                0 0 40px rgba(0,176,255,.8);
+
         }
 
         .container .item .button {
@@ -52,7 +58,8 @@
             border-radius: 50%;
             position: relative;
             border: 1px solid #000;
-            background: radial-gradient(#1b1919, #252527);
+            /* background: radial-gradient(#1b1919, #252527); */
+            background: linear-gradient(#000,#333);
             cursor: pointer;
 
         }
@@ -70,23 +77,24 @@
         }
 
         .container .item .button::before {
-            width: 80px;
-            height: 80px;
-            background: radial-gradient(#292727, #222225);
+            width: 65px;
+            height: 65px;
+            background: #1b1b1b;
         }
 
         .container .item .button::after {
             width: 20px;
             height: 20px;
             transition: .5s;
+            background: #222;
         }
 
         .container [type="checkbox"]:checked+.item .button::after {
-            background-color: lightblue;
-            box-shadow: 0 0 10px lightblue,
-                0 0 15px lightblue,
-                0 0 20px lightblue,
-                0 0 25px lightblue;
+            background-color: rgba(0,176,255,1);
+            box-shadow: 0 0 10px rgba(0,176,255,1),
+                0 0 15px rgba(0,176,255,1),
+                0 0 20px rgba(0,176,255,1),
+                0 0 25px rgba(0,176,255,1);
         }
 
         @media screen and (min-width:768px) {
