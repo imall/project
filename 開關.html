@@ -9,8 +9,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-           body {
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+
             background-color: #060606;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
         }
 
         [type="checkbox"] {
@@ -31,28 +41,21 @@
 
         .container .item span {
             display: block;
-            width: 160px;
-            height: 160px;
-            margin: auto;
-            text-align: center;
             line-height: 160px;
             font-size: 50px;
-           
-         
         }
 
-        .container .item span i{
-   color: #222;
-   transition: .5s;
+        .container .item span i {
+            color: #222;
+            transition: .5s;
         }
 
-        .container [type="checkbox"]:checked+.item span i{
-            color: rgba(0,176,255,1);
-            text-shadow: 0 0 10px rgba(0,176,255,.8),
-                0 0 20px rgba(0,176,255,.8),
-                0 0 30px rgba(0,176,255,.8),
-                0 0 40px rgba(0,176,255,.8);
-
+        .container [type="checkbox"]:checked+.item span i {
+            color: rgba(0, 176, 255, 1);
+            text-shadow: 0 0 10px rgba(0, 176, 255, .8),
+                0 0 20px rgba(0, 176, 255, .8),
+                0 0 30px rgba(0, 176, 255, .8),
+                0 0 40px rgba(0, 176, 255, .8);
         }
 
         .container .item .button {
@@ -63,10 +66,8 @@
             border-radius: 50%;
             position: relative;
             border: 1px solid #000;
-            /* background: radial-gradient(#1b1919, #252527); */
-            background: linear-gradient(#000,#333);
+            background: linear-gradient(#000, #333);
             cursor: pointer;
-
         }
 
         .container .item .button::before,
@@ -85,7 +86,7 @@
             width: 55px;
             height: 55px;
             background: #1b1b1b;
-            border:5px solid #161616
+            border: 5px solid #161616
         }
 
         .container .item .button::after {
@@ -96,11 +97,11 @@
         }
 
         .container [type="checkbox"]:checked+.item .button::after {
-            background-color: rgba(0,176,255,1);
-            box-shadow: 0 0 10px rgba(0,176,255,1),
-                0 0 15px rgba(0,176,255,1),
-                0 0 20px rgba(0,176,255,1),
-                0 0 25px rgba(0,176,255,1);
+            background-color: rgba(0, 176, 255, 1);
+            box-shadow: 0 0 10px rgba(0, 176, 255, 1),
+                0 0 15px rgba(0, 176, 255, 1),
+                0 0 20px rgba(0, 176, 255, 1),
+                0 0 25px rgba(0, 176, 255, 1);
         }
 
         @media screen and (min-width:768px) {
