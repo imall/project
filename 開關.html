@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background-color: #060606;
+        }
+
+        [type="checkbox"] {
+            display: none;
+        }
+
+        .container {
+            width: 960px;
+            margin: auto;
+            display: flex;
+        }
+
+        .container .item {
+            width: 320px;
+            text-align: center;
+        }
+
+        .container .item span {
+            display: block;
+            width: 160px;
+            height: 160px;
+            margin: auto;
+            text-align: center;
+            line-height: 160px;
+            font-size: 50px;
+            transition: .5s;
+        }
+
+        .container [type="checkbox"]:checked+.item span {
+            color: lightblue;
+        }
+
+        .container .item .button {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            position: relative;
+            border: 1px solid #000;
+            background: radial-gradient(#1b1919, #252527);
+            cursor: pointer;
+        
+        }
+
+        .container .item .button::before,
+        .container .item .button::after {
+            content: '';
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 50%;
+        }
+
+        .container .item .button::before {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(#292727, #222225);
+        }
+
+        .container .item .button::after {
+            width: 20px;
+            height: 20px;
+            transition: .5s;
+        }
+
+        .container [type="checkbox"]:checked+.item .button::after {
+            background-color: lightblue;
+            box-shadow: 0 0 10px lightblue,
+                0 0 15px lightblue,
+                0 0 20px lightblue,
+                0 0 25px lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="bluetooth">
+        <div class="item">
+            <span><i class="fa fa-bluetooth-b" aria-hidden="true"></i></span>
+            <label class="button" for="bluetooth"></label>
+        </div>
+        <input type="checkbox" id="wifi">
+        <div class="item">
+            <span><i class="fa fa-wifi" aria-hidden="true"></i></span>
+            <label class="button" for="wifi"></label>
+        </div>
+        <input type="checkbox" id="volume">
+        <div class="item">
+            <span><i class="fa fa-volume-down" aria-hidden="true"></i></span>
+            <label class="button" for="volume"></label>
+        </div>
+    </div>
+</body>
+
+</html>
