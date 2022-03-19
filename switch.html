@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開關</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+
+            background-color: #060606;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        [type="checkbox"] {
+            display: none;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container .item {
+            width: 100%;
+            text-align: center;
+        }
+
+        .container .item span {
+            display: block;
+            line-height: 160px;
+            font-size: 50px;
+        }
+
+        .container .item span i {
+            color: #222;
+            transition: .5s;
+        }
+
+        .container [type="checkbox"]:checked+.item span i {
+            color: rgba(0, 176, 255, 1);
+            text-shadow: 0 0 10px rgba(0, 176, 255, .8),
+                0 0 20px rgba(0, 176, 255, .8),
+                0 0 30px rgba(0, 176, 255, .8),
+                0 0 40px rgba(0, 176, 255, .8);
+        }
+
+        .container .item .button {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            position: relative;
+            border: 1px solid #000;
+            background: linear-gradient(#000, #333);
+            cursor: pointer;
+        }
+
+        .container .item .button::before,
+        .container .item .button::after {
+            content: '';
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 50%;
+        }
+
+        .container .item .button::before {
+            width: 55px;
+            height: 55px;
+            background: #1b1b1b;
+            border: 5px solid #161616
+        }
+
+        .container .item .button::after {
+            width: 20px;
+            height: 20px;
+            transition: .5s;
+            background: #222;
+        }
+
+        .container [type="checkbox"]:checked+.item .button::after {
+            background-color: rgba(0, 176, 255, 1);
+            box-shadow: 0 0 10px rgba(0, 176, 255, 1),
+                0 0 15px rgba(0, 176, 255, 1),
+                0 0 20px rgba(0, 176, 255, 1),
+                0 0 25px rgba(0, 176, 255, 1);
+        }
+
+        @media screen and (min-width:768px) {
+            .container {
+                width: 720px;
+            }
+
+            .container .item {
+                width: 33.333333%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="bluetooth">
+        <div class="item">
+            <span><i class="fa fa-bluetooth-b" aria-hidden="true"></i></span>
+            <label class="button" for="bluetooth"></label>
+        </div>
+        <input type="checkbox" id="wifi">
+        <div class="item">
+            <span><i class="fa fa-wifi" aria-hidden="true"></i></span>
+            <label class="button" for="wifi"></label>
+        </div>
+        <input type="checkbox" id="volume">
+        <div class="item">
+            <span><i class="fa fa-volume-down" aria-hidden="true"></i></span>
+            <label class="button" for="volume"></label>
+        </div>
+    </div>
+</body>
+
+</html>
