@@ -1,4 +1,4 @@
 @echo off
 git add .
-
-pause
+git commit -m 'add'
+git push
