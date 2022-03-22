@@ -70,15 +70,19 @@
 
 
     .section .kv img {
+
+        --width: 2;
+        --height: 1;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 50%;
-        aspect-ratio: 2/1;
+        aspect-ratio: var(--width)/var(--height);
         border-radius: 20px;
         vertical-align: middle;
         border: 5px solid #606060;
+        object-fit: cover;
     }
 
     .section .kv .txt {
@@ -109,22 +113,25 @@
 
             font-size: 30px;
         }
-        .section .kv .txt{
-           width: 71%;
-           bottom: 5%;
+
+        .section .kv .txt {
+            width: 71%;
+            bottom: 5%;
         }
 
-        .section .kv .txt h1{
+        .section .kv .txt h1 {
             font-size: 20px;
         }
-        .section .kv .txt p{
+
+        .section .kv .txt p {
             font-size: 12px;
             width: 100%;
         }
 
-        .section .kv img{
+        .section .kv img {
             width: 65%;
-            aspect-ratio: 1/2;
+            aspect-ratio: var(--height)/ var(--width);
+
         }
 
     }
@@ -138,7 +145,7 @@
         </div>
         <div class="section section2">
             <div class="kv">
-                <img src="https://picsum.photos/1440/720/?random=10">
+                <img src="https://picsum.photos/1440/720/?random=10" class="img">
                 <div class="txt">
                     <h1>Memory</h1>
                     <p>回憶會從你的照片圖庫裡，精選別具意義的時刻，自動製作成幻燈片播放。你可以將「回憶」進行個人化設計，營造獨樹一幟的風格調性，甚至還可以從你的音樂資料庫裡加入配樂。
@@ -149,7 +156,7 @@
         </div>
         <div class="section section3">
             <div class="kv">
-                <img src="https://picsum.photos/1440/720/?random=10">
+                <img src="https://picsum.photos/1440/720/?random=10" class="img">
                 <div class="txt">
                     <h1>Memory</h1>
                     <p>回憶會從你的照片圖庫裡，精選別具意義的時刻，自動製作成幻燈片播放。你可以將「回憶」進行個人化設計，營造獨樹一幟的風格調性，甚至還可以從你的音樂資料庫裡加入配樂。
@@ -167,17 +174,27 @@
 
     <script>
         let scale = 0;
+
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
         const app = document.querySelector("#app")
         const section2 = document.querySelector(".section2")
+        const imglist = document.querySelectorAll(".img")
         app.addEventListener('scroll', () => {
             if (app.scrollTop > window.innerHeight && app.scrollTop < window.innerHeight * 2) {
                 scale = 4 - 3 * ((app.scrollTop - window.innerHeight) / window.innerHeight)
                 section2.style = `--scale:${scale}`
-            } 
-            
+            }
+
             if (app.scrollTop > window.innerHeight * 2) {
                 section2.style = "position: static;"
-            } 
+            }
+        })
+
+        imglist.forEach((element)=>{
+            element.style=`
+            --width: ${windowWidth};
+        --height: ${windowHeight};`
         })
     </script>
 
