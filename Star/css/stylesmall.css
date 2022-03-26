@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     padding-top: 70px;
     padding-bottom: 13.33333333333333%;
     font-family: "Noto Sans TC", sans-serif;
+   
 }
 
 .container {
@@ -84,9 +87,8 @@ body {
     height: 0;
     padding-bottom: 149.3333333333333%;
     /* 第一張圖，我不確定實際要的效果要做在left 還是center ，可能要做出來再跟設計師對稿 */
-    background: url(../img/Body_BgPoint_repeat.png) repeat left bottom,
-        url(../img/KV_Bgimage-xs.png) no-repeat center bottom;
-    background-size: 300px, 100%;
+    background: url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
+        url(../img/KV_Bgimage-xs.png) no-repeat center bottom/100px;
     background-color: #5845A1;
     position: relative;
 }
@@ -183,6 +185,7 @@ body {
     width: 90%;
     height: 21.30177514792899%;
     margin: auto;
+    scroll-margin-top: 70px;
 }
 
 .mission-content .mission-title picture {
@@ -239,7 +242,8 @@ body {
 
 .board-full {
     padding: 26.9% 0 50%;
-    background: url(../img/Mission_TopClould_repeat.png)no-repeat top center/100%, url(../img/Mission_BgimageTop-xs.png) no-repeat top center/100%, url(../img/Notice_Bgimage-xs.png) no-repeat bottom center/100%;
+    background: url(../img/Mission_TopClould_repeat.png)no-repeat top center/100%, url(../img/Mission_BgimageTop-xs.png) no-repeat top center/100%, url(../img/Notice_Bgimage-xs.png) no-repeat bottom center/100%,
+    url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px;
     background-color: #5845A1;
 
 }
@@ -248,6 +252,9 @@ body {
     width: 90%;
     /* height: 90px; */
     margin: auto;
+    scroll-margin-top: 70px;
+
+
 }
 
 .board-content .board-title picture {
