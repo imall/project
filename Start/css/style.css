@@ -1,0 +1,123 @@
+body {
+    padding-top: 70px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header-full {
+    background-color: #F36518;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    width: 300px;
+}
+
+.header-title a {
+    display: block;
+}
+
+.header-title span ,
+.kv-title span{
+    position: absolute;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* 實際專案，很習慣像這樣把層級全部寫出來
+想問除了原始碼字數變多之外，還有什麼缺點 */
+
+.header-content nav ul {
+    display: flex;
+}
+
+.header-content nav ul li {
+    margin-left: 20px;
+}
+
+.header-content nav ul li a {
+    width: 100%;
+    color: #fff;
+}
+
+.kv-full {
+    height: 760px;
+    /* 第一張圖，我不確定實際要的效果要做在left 還是center ，可能要做出來再跟設計師對稿 */
+    background: url(../img/Body_BgPoint_repeat.png)  repeat  left bottom,
+        url(../img/KV_Bgimage-lg.png) no-repeat center bottom;
+    background-size:300px, 2000px;
+    background-color: #5845A1;
+    position: relative;
+}
+.kv-content{
+    height: 100%;
+}
+
+.kv-title {
+    position: fixed;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    z-index: 1;
+}
+
+.kv-gifts {
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    top: 350px;
+}
+
+.kv-gift-brick {
+    transform: translate(-30%,30%);
+}
+
+.kv-gift-shark {
+    transform: translate(30%,30%);
+}
+
+.kv-full .kv-content .rock-img ,
+.kv-full::before,
+.kv-full::after{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.kv-full .kv-content .rock-img{
+    width: 200px;
+    z-index: 1;
+}
+
+.kv-full::before {
+    content: '';
+    background: url(../img/KV_RocketCloud_repeat.png) repeat-x center bottom/1000px;
+    height: 290px;
+
+}
+
+.kv-full::after {
+    content: '';
+    z-index: 1;
+    background: url(../img/KV_RocketCloudWhite_repeat.png) repeat-x center bottom/1000px;
+    height: 290px;
+}

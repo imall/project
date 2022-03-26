@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/stylesmall.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="container-fluid  header-full">
+        <div class="container header-content">
+            <h1 class="header-title">
+                <a href="#">
+                    <span>Amos & CSScoke</span>
+                    <img src="./img/Nav_Logo.png" alt="Amos & CSScoke">
+                </a>
+            </h1>
+            <nav>
+                <h2>導覽列</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            闖關公告
+                            <img src="./img/Fixed_Button_Description.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            任務布告欄
+                            <img src="./img/Fixed_Button_Mission.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            注意事項
+                            <img src="./img/Fixed_Button_Notes.png">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container-fluid kv-full">
+        <div class="container kv-content">
+            <h2 class="kv-title">
+                <span>切版挑戰</span>
+                <!-- 
+                    寫到這裡突然想到，如果不用picture控制斷點換圖片
+                    是必須寫兩張picture ，然後在css 控制哪張圖片顯示、哪張隱藏嗎？
+                -->
+                <picture>
+                    <source srcset="./img/KV_Title-lg.png" media="(min-width: 768px)">
+                    <img src="./img/KV_Title-xs.png" />
+                </picture>
+            </h2>
+            <ul class="kv-gifts">
+                <li class="kv-gift kv-gift-stick">
+                    <a href="#一路平安狼牙棒">
+                        <img src="./img/KV_GiftStick.png" alt="一路平安狼牙棒">
+                    </a>
+                </li>
+                <li class="kv-gift kv-gift-brick">
+                    <a href="#醒腦磚頭">
+                        <img src="./img/KV_GiftBrick.png" alt="醒腦磚頭">
+                    </a>
+                </li>
+                <li class="kv-gift kv-gift-shark">
+                    <a href="#出奇不意鯊魚頭">
+                        <img src="./img/KV_GiftShark.png" alt="出奇不意鯊魚頭">
+                    </a>
+                </li>
+                <li class="kv-gift kv-gift-coco">
+                    <a href="#寫扣專用飲料杯">
+                        <img src="./img/KV_GiftCoco.png" alt="寫扣專用飲料杯">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container-fluid mission-full">
+        <div class="container mission-content">
+            <h2 class="mission-title">
+                <span><small>星星</small>闖關公告</span>
+                <picture>
+                    <source srcset="./img/Description_Title-lg.png" media="(min-width: 768px)">
+                    <img src="./img/Description_Title-xs.png" alt="星星闖關公告" />
+                </picture>
+            </h2>
+            <p>
+                <span>即日起~108/01/31</span>
+                <span>Amos暴力切版入門班全體同學皆可參加</span>
+            </p>
+            <div class="mission-paragraph">
+                <div class="mission-paragraph-gift">
+                    <img src="./img/Description_Star.png" alt="星星任務贈好禮">
+                </div>
+                <div class="mission-paragraph-samisu">
+                    <img src="./img/Description_BigStar.png" alt="巨星任務享加碼">
+                </div>
+            </div>
+            <!-- 每次遇到這樣的小區塊都會猶豫 -->
+            <span>＊貼心提醒：此為切版練習作業，不可當作品展示吆</span>
+            <a href="#前往星星出任務">
+                <img src="./img/Description_Button.png">
+            </a>
+        </div>
+    </section>
+
+
+
+    <section class="container-fluid board-full">
+        <div class="container board-content">
+            <h2 class="board-title">
+                <span><small>星星</small>任務布告欄</span>
+                <picture>
+                    <source srcset="./img/Mission_Title-lg.png" media="(min-width: 768px)">
+                    <img src="./img/Mission_Title-xs.png" alt="星星任務布告欄" />
+                </picture>
+            </h2>
+            <ul class="board-lists">
+                <li class="board-list board-html">
+                    <a href="#HTML標籤">
+                        <img src="./img/Mission_Star_BgGreen-Normal.png" class="Normal-pic">
+                        <img src="./img/Mission_Star_BgGreen-Hover.png" class="Hover-pic">
+                        <picture>
+                            <source srcset="./img/Mission_Star_ContentHTML-lg.png" media="(min-width: 768px)">
+                            <img src="./img/Mission_Star_ContentHTML-xs.png" alt="HTML標籤" />
+                        </picture>
+                    </a>
+                </li>
+                <li class="board-list board-css">
+                    <a href="#CSS樣式表">
+                        <img src="./img/Mission_Star_BgGreen-Normal.png" class="Normal-pic">
+                        <img src="./img/Mission_Star_BgGreen-Hover.png" class="Hover-pic">
+                        <picture>
+                            <source srcset="./img/Mission_Star_ContentCSS-lg.png" media="(min-width: 768px)">
+                            <img src="./img/Mission_Star_ContentCSS-xs.png" alt="CSS樣式表" />
+                        </picture>
+                    </a>
+                </li>
+                <li class="board-list board-sizeCalc">
+                    <a href="#區塊尺寸計算">
+                        <img src="./img/Mission_Star_BgGreen-Normal.png" class="Normal-pic">
+                        <img src="./img/Mission_Star_BgGreen-Hover.png" class="Hover-pic">
+                        <picture>
+                            <source srcset="./img/Mission_Star_ContentBoxsize-lg.png" media="(min-width: 768px)">
+                            <img src="./img/Mission_Star_ContentBoxsize-xs.png" alt="區塊尺寸計算" />
+                        </picture>
+                    </a>
+                </li>
+                <li class="board-list board-doubleF">
+                    <a href="#Float與Flex">
+                        <img src="./img/Mission_Star_BgGreen-Normal.png" class="Normal-pic">
+                        <img src="./img/Mission_Star_BgGreen-Hover.png" class="Hover-pic">
+                        <picture>
+                            <source srcset="./img/Mission_Star_ContentFloatFlex-lg.png" media="(min-width: 768px)">
+                            <img src="./img/Mission_Star_ContentFloatFlex-xs.png" alt="Float與Flex" />
+                        </picture>
+                    </a>
+                </li>
+                <li class="board-list board-position">
+                    <a href="#定位">
+                        <img src="./img/Mission_Star_BgGreen-Normal.png" class="Normal-pic">
+                        <img src="./img/Mission_Star_BgGreen-Hover.png" class="Hover-pic">
+                        <picture>
+                            <source srcset="./img/Mission_Star_ContentPosition-lg.png" media="(min-width: 768px)">
+                            <img src="./img/Mission_Star_ContentPosition-xs.png" alt="定位" />
+                        </picture>
+                    </a>
+                </li>
+                <li class="board-list board-inline-block">
+                    <a href="#inline與block">
+                        <img src="./img/Mission_Star_BgGreen-Normal.png" class="Normal-pic">
+                        <img src="./img/Mission_Star_BgGreen-Hover.png" class="Hover-pic">
+                        <picture>
+                            <source srcset="./img/Mission_Star_ContentInlineBlock-lg.png" media="(min-width: 768px)">
+                            <img src="./img/Mission_Star_ContentInlineBlock-xs.png" alt="inline與block" />
+                        </picture>
+                    </a>
+                </li>
+                <li class="board-list board-align-center">
+                    <a href="#垂直置中23法">
+                        <img src="./img/Mission_Star_BgPurple-Normal.png" class="Normal-pic">
+                        <img src="./img/Mission_Star_BgPurple-Hover.png" class="Hover-pic">
+                        <picture>
+                            <source srcset="./img/Mission_Star_ContentCenterMiddle-lg.png" media="(min-width: 768px)">
+                            <img src="./img/Mission_Star_ContentCenterMiddle-xs.png" alt="垂直置中23法" />
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+            <a href="#活動注意事項">
+                <img src="./img/Notice_Button.png" alt="活動注意事項">
+            </a>
+        </div>
+    </section>
+
+    <footer class="container-fluid footer-full">
+        <div class="container footer-content">
+            <h3 class="footer-title">
+                <span>金魚切版</span>
+                <span>基礎跟上</span>
+            </h3>
+            <p class="footer-paragraph">
+                <span>請記住「要求自己」是基本條件</span>
+                <span>本版只提供Amos課程學員進行切版進行使用</span>
+            </p>
+            <span>暴力服務專線： <a href="tel:0800945945">0800-945-945</a></span>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
