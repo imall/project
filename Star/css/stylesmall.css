@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     padding-top: 70px;
-    padding-bottom: 13.33333333333333%;
+    padding-bottom: 14%;
     font-family: "Noto Sans TC", sans-serif;
-   
+
 }
 
 .container {
-    width: 100%;
-    min-width: 90%;
+    width: 90%;
     margin: auto;
 }
 
@@ -84,9 +85,8 @@ body {
     width: 100%;
     height: 0;
     padding-bottom: 149.3333333333333%;
-    /* 第一張圖，我不確定實際要的效果要做在left 還是center ，可能要做出來再跟設計師對稿 */
     background: url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
-        url(../img/KV_Bgimage-xs.png) no-repeat center bottom/100px;
+        url(../img/KV_Bgimage-xs.png) no-repeat center bottom/100%;
     background-color: #5845A1;
     position: relative;
 }
@@ -122,16 +122,15 @@ body {
 
 .kv-content {
     position: fixed;
+    left: 0;
+    right: 0;
     top: 70px;
     height: 560px;
 }
 
 .kv-content .kv-title {
-    width: 90%;
-    left: 0;
-    right: 0;
+ 
     margin: auto;
-    z-index: 1;
     margin-bottom: 20px;
 }
 
@@ -141,7 +140,7 @@ body {
 }
 
 .kv-gifts {
-    width: 96%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -161,12 +160,12 @@ body {
 
 .kv-gift-coco,
 .kv-gift-stick {
-    width: 37.33333333333333%;
+    width: 41.48148148148148%;
 }
 
 .kv-gift-shark,
 .kv-gift-brick {
-    width: 48%;
+    width: 50%;
     transform: translateY(-20%);
     order: 1;
 }
@@ -180,7 +179,7 @@ body {
 }
 
 .mission-content .mission-title {
-    width: 90%;
+   
     height: 21.30177514792899%;
     margin: auto;
     scroll-margin-top: 70px;
@@ -197,7 +196,7 @@ body {
 }
 
 .mission-content p {
-    width: 90%;
+   
     text-align: center;
     margin: auto;
     line-height: 1.4069;
@@ -210,7 +209,7 @@ body {
 }
 
 .mission-content .mission-paragraph {
-    width: 90%;
+  
     margin: auto;
 }
 
@@ -223,7 +222,7 @@ body {
 
 .mission-content>span {
     display: block;
-    width: 90%;
+   
     margin: auto;
     margin-bottom: 2.958579881656805%;
     text-align: center;
@@ -232,27 +231,26 @@ body {
 
 .mission-content>a {
     display: block;
-    width: 90%;
+  
     margin: auto;
 }
 
 /* ----------- */
 
 .board-full {
-    padding: 26.9% 0 50%;
+    padding: 24.333333% 0 50%;
     background: url(../img/Mission_TopClould_repeat.png)no-repeat top center/100%, url(../img/Mission_BgimageTop-xs.png) no-repeat top center/100%, url(../img/Notice_Bgimage-xs.png) no-repeat bottom center/100%,
-    url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px;
+        url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px;
     background-color: #5845A1;
 
 }
-
+.board-content{
+    width: 100%;
+}
 .board-content .board-title {
-    width: 90%;
     /* height: 90px; */
     margin: auto;
     scroll-margin-top: 70px;
-
-
 }
 
 .board-content .board-title picture {
@@ -281,8 +279,9 @@ body {
 
 .board-list a>* {
     position: absolute;
-    top: 0;
-
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 
 .board-list a .Hover-pic {
@@ -304,16 +303,13 @@ body {
 
 
 .footer-full {
-    /* background-color: #DEDEDE; */
     background-color: #717171;
     padding: 30px 0 45px;
     position: relative;
     z-index: 1;
 }
 
-.footer-content {
-    width: 90%;
-}
+
 
 .footer-content .footer-title {
     color: #DEDEDE;
@@ -347,4 +343,55 @@ body {
     text-align: center;
     color: #feda00;
     font-size: 22px;
+}
+
+@media screen and (min-width:768px) {
+
+    .container {
+        max-width: 1200px;
+    }
+
+    /* ---導覽列(header)--- */
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .header-content nav {
+        position: static;
+        width: 450px;
+    }
+
+    .header-content nav ul {
+        line-height: 40px;
+        align-items: center;
+    }
+
+    .header-content nav ul li {
+        height: 100%;
+        background-color: inherit;
+        border-radius: 200px;
+    }
+
+    .header-content nav ul li:hover {
+        background-color: #fff;
+    }
+
+    .header-content nav ul li a {
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        border-radius: 200px;
+    }
+
+    .header-content nav ul li:hover a {
+        color: #F36518;
+    }
+
+    .header-content nav ul li img {
+        display: none;
+    }
 }
