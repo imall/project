@@ -62,17 +62,15 @@ body {
     height: 9.821428571428571%;
 }
 
-.header-content nav ul li:nth-child(1) {
+.header-content nav ul li {
     background-color: #00A79B;
 }
 
-.header-content nav ul li:nth-child(2) {
-    background-color: #00A79B;
-}
-
-.header-content nav ul li:nth-child(3) {
+.header-content nav ul li:hover {
     background-color: #FF5E79;
 }
+
+
 
 .header-content nav ul li a {
     font-size: 0;
