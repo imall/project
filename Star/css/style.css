@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding-top: 70px;
+    padding-bottom: 14%;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
 }
 
 
-
+/* ---導覽列(header)--- */
 .header-full {
     background-color: #F36518;
     position: fixed;
@@ -12,22 +25,23 @@ body {
     top: 0;
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-content{
+    line-height: 60px;
 }
-
-.header-title {
-    width: 300px;
-}
-
-.header-title a {
+.header-content .header-title a {
     display: block;
+    /* 我不確定行動裝置的title 是要求固定寬度，還是照比例縮放  */
+    /* width: 90%; */
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
 }
 
-.header-title span ,
-.kv-title span{
+.header-title span,
+.header-content nav h2,
+.kv-title span,
+.mission-title span,
+.board-title span {
     position: absolute;
     font-size: 1px;
     width: 1px;
@@ -35,63 +49,54 @@ body {
     overflow: hidden;
 }
 
-/* 實際專案，很習慣像這樣把層級全部寫出來
-想問除了原始碼字數變多之外，還有什麼缺點 */
+.header-content nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
 
 .header-content nav ul {
     display: flex;
 }
 
 .header-content nav ul li {
-    margin-left: 20px;
+    width: 33.3333%;
+    height: 9.821428571428571%;
 }
+
+.header-content nav ul li {
+    background-color: #00A79B;
+}
+
+.header-content nav ul li:hover {
+    background-color: #FF5E79;
+}
+
+
 
 .header-content nav ul li a {
+    font-size: 0;
     width: 100%;
-    color: #fff;
+    display: block;
 }
 
+/* ---主視覺區塊--- */
+
 .kv-full {
-    height: 760px;
-    /* 第一張圖，我不確定實際要的效果要做在left 還是center ，可能要做出來再跟設計師對稿 */
-    background: url(../img/Body_BgPoint_repeat.png)  repeat  left bottom,
-        url(../img/KV_Bgimage-lg.png) no-repeat center bottom;
-    background-size:300px, 2000px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 149.3333333333333%;
+    background: url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
+        url(../img/KV_Bgimage-xs.png) no-repeat center bottom/100%;
     background-color: #5845A1;
     position: relative;
 }
-.kv-content{
-    height: 100%;
-}
 
-.kv-title {
-    position: fixed;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    z-index: 1;
-}
-
-.kv-gifts {
-    position: fixed;
-    display: flex;
-    z-index: 1;
-    width: 100%;
-    max-width: 1200px;
-    top: 350px;
-}
-
-.kv-gift-brick {
-    transform: translate(-30%,30%);
-}
-
-.kv-gift-shark {
-    transform: translate(30%,30%);
-}
-
-.kv-full .kv-content .rock-img ,
+.kv-full .rock-img,
 .kv-full::before,
-.kv-full::after{
+.kv-full::after {
     position: absolute;
     margin: auto;
     left: 0;
@@ -99,21 +104,492 @@ body {
     bottom: 0;
 }
 
-.kv-full .kv-content .rock-img{
-    width: 200px;
-    z-index: 1;
-}
 
 .kv-full::before {
     content: '';
-    background: url(../img/KV_RocketCloud_repeat.png) repeat-x center bottom/1000px;
-    height: 290px;
-
+    background: url(../img/KV_RocketCloud_repeat.png) repeat-x center bottom/100%;
+    height: 18.75%;
 }
 
 .kv-full::after {
     content: '';
+    background: url(../img/KV_RocketCloudWhite_repeat.png) repeat-x center bottom/100%,
+        url(../img/KV_Rocket.png) no-repeat center bottom/20%;
+    height: 38.75%;
     z-index: 1;
-    background: url(../img/KV_RocketCloudWhite_repeat.png) repeat-x center bottom/1000px;
-    height: 290px;
+}
+
+.kv-content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 70px;
+    height: 560px;
+}
+
+.kv-content .kv-title {
+
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.kv-content .kv-title picture {
+    display: block;
+    width: 100%;
+}
+
+.kv-gift-list {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.kv-gift-list .kv-gift a {
+    display: block;
+    border-radius: 100px;
+}
+
+.kv-gift-list .kv-gift a:hover {
+    position: relative;
+    z-index: 1;
+}
+
+.kv-gift-coco,
+.kv-gift-stick {
+    width: 41.48148148148148%;
+}
+
+.kv-gift-shark,
+.kv-gift-brick {
+    width: 50%;
+    transform: translateY(-20%);
+    order: 1;
+}
+
+/* ---任務區塊--- */
+.board-full,
+.mission-full {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.mission-content .mission-title {
+
+    height: 21.30177514792899%;
+    margin: auto;
+    scroll-margin-top: 70px;
+}
+
+.mission-content .mission-title picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.mission-content .mission-title picture img {
+    height: 100%;
+}
+
+.mission-content p {
+
+    text-align: center;
+    margin: auto;
+    line-height: 1.4069;
+    margin-bottom: 2.958579881656805%;
+}
+
+.mission-content p span {
+    display: block;
+    font-size: 16px;
+}
+
+.mission-content p span:nth-child(2){
+    display: none;
+}
+
+.mission-content .mission-paragraph {
+
+    margin: auto;
+}
+
+.mission-content .mission-paragraph> div[class^=mission-paragraph] {
+    display: block;
+    width: 100%;
+    margin-bottom: 15.75px;
+}
+
+
+.mission-content>span {
+    display: block;
+
+    margin: auto;
+    margin-bottom: 2.958579881656805%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.mission-content>a {
+    display: block;
+
+    margin: auto;
+}
+
+/* ----------- */
+
+.board-full {
+    padding: 24.333333% 0 50%;
+    background: url(../img/Mission_TopClould_repeat.png)no-repeat top center/100%, url(../img/Mission_BgimageTop-xs.png) no-repeat top center/100%, url(../img/Notice_Bgimage-xs.png) no-repeat bottom center/100%,
+        url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px;
+    background-color: #5845A1;
+
+}
+
+.board-content {
+    width: 100%;
+}
+
+.board-content .board-title {
+    margin: auto;
+    scroll-margin-top: 70px;
+}
+
+.board-content .board-title picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.board-lists {
+    background: url(../img/Mission_BgimageBody_repeat-xs.png) repeat-y center 0px /100%;
+}
+
+.board-list {
+    width: 90%;
+    margin: auto;
+    aspect-ratio: 1/1;
+}
+
+.board-list a {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.board-list a>* {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.board-list a .Hover-pic {
+   opacity: 0;
+    transition: .3s;
+}
+
+.board-list a:hover .Hover-pic {
+ opacity: 1;
+}
+
+.board-content>a {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* ---footer--- */
+
+
+.footer-full {
+    background-color: #717171;
+    padding: 30px 0 45px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.footer-content .footer-title {
+    color: #DEDEDE;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2;
+}
+
+.footer-content .footer-title span:first-of-type {
+    margin-right: 1em;
+}
+
+.footer-content .footer-paragraph {
+    color: #DEDEDE;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer-content .footer-paragraph span {
+    display: block;
+}
+
+.footer-content>span {
+    display: block;
+    text-align: center;
+    color: #feda00;
+    font-size: 22px;
+    padding-top: 1em;
+    margin-top: 1em;
+    border-top: 1px solid #DEDEDE;
+}
+
+@media screen and (min-width:768px) {
+    body {
+        padding-bottom: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    /* ---導覽列(header)--- */
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-content nav {
+        position: static;
+        width: 450px;
+    }
+
+    .header-content nav ul {
+        line-height: 40px;
+        align-items: center;
+    }
+
+    .header-content nav ul li {
+        height: 100%;
+        background-color: inherit;
+        border-radius: 200px;
+    }
+
+    .header-content nav ul li:hover {
+        background-color: #fff;
+    }
+
+    .header-content nav ul li a {
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        border-radius: 200px;
+    }
+
+    .header-content nav ul li:hover a {
+        color: #F36518;
+    }
+
+    .header-content nav ul li img {
+        display: none;
+    }
+
+    /* ---------主視覺區--------- */
+
+    .kv-full {
+        padding-bottom: 63.33333333333333%;
+        background: url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
+            url(../img/KV_Bgimage-lg.png) no-repeat center bottom/166.6666666666667%;
+        background-color: #5845A1;
+    }
+
+    .kv-full::before {
+        background-size: 100%;
+        height: 45%;
+    }
+
+    .kv-full::after {
+        background: url(../img/KV_RocketCloudWhite_repeat.png) repeat-x center bottom/100%,
+            url(../img/KV_Rocket.png) no-repeat center bottom/16.66666%;
+        z-index: 1;
+        height: 55%;
+    }
+
+    .kv-content {
+        padding-bottom: 63.33333333333333%;
+        height: 0;
+    }
+
+    .kv-content .kv-title {
+        margin-bottom: 0;
+    }
+
+    .kv-content .kv-title picture {
+        display: block;
+        width: 100%;
+    }
+
+    .kv-gift-stick,
+    .kv-gift-coco {
+        margin-right: -1.666666666666667%;
+    }
+
+    .kv-gift {
+        width: 25.83333333333333%;
+    }
+
+
+
+    .kv-gift-brick {
+        transform: translate(-22.58064516129032%, 25.80645161290323%);
+    }
+
+    .kv-gift-shark {
+        transform: translate(22.58064516129032%, 25.80645161290323%);
+    }
+
+    .kv-gift-coco {
+        order: 1;
+    }
+
+
+    /* ---任務區塊--- */
+
+    .mission-content .mission-title {
+        width: 30%;
+        margin: auto;
+    }
+  
+
+    .mission-content p {
+        margin-bottom: 0;
+        font-size: 0;
+    }
+
+    .mission-content p span {
+        display: inline-block;
+        line-height: 40px;
+        font-size: 22px;
+    }
+
+    .mission-content p span:nth-child(2){
+        display: inline-block;
+    }
+
+    /* .mission-content p span:first-of-type::after{
+        content: "，";
+    } */
+
+    .mission-content .mission-paragraph {
+        display: flex;
+    }
+
+    .mission-content .mission-paragraph > div[class^=mission-paragraph]{
+        width: 50%;
+        margin-bottom: 0;
+     
+    }
+
+    .mission-content>span {
+
+        line-height: 40px;
+        margin-bottom: 0;
+        font-size: 22px;
+    }
+
+    .mission-content>a {
+        width: 30%;
+    }
+
+    /* ----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ---------footer--------- */
+    .footer-full {
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-content .footer-title,
+    .footer-content .footer-paragraph {
+        width: 50%;
+        line-height: 60px;
+        text-align: left;
+    }
+
+    .footer-content .footer-title {
+        font-size: 50px;
+    }
+
+    .footer-content .footer-paragraph {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .footer-content>span {
+        flex-grow: 1;
+        font-size: 30px;
+    }
+
+}
+
+
+
+@media screen and (min-width:1200px) {
+    .kv-full {
+        padding-bottom: 0%;
+        background: url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
+            url(../img/KV_Bgimage-lg.png) no-repeat center bottom/2000px;
+        background-color: #5845A1;
+        height: 760px;
+    }
+
+
+    .kv-content {
+        padding-bottom: 0;
+        height: 760px;
+    }
+
+    .kv-full::before {
+        background-size: 1200px;
+
+    }
+
+    .kv-full::after {
+        background: url(../img/KV_RocketCloudWhite_repeat.png) repeat-x center bottom/1200px,
+            url(../img/KV_Rocket.png) no-repeat center bottom/200px;
+
+        z-index: 1;
+    }
 }
