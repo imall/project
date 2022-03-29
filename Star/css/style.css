@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -25,9 +26,10 @@ body {
     top: 0;
 }
 
-.header-content{
+.header-content {
     line-height: 60px;
 }
+
 .header-content .header-title a {
     display: block;
     /* 我不確定行動裝置的title 是要求固定寬度，還是照比例縮放  */
@@ -89,8 +91,8 @@ body {
     height: 0;
     padding-bottom: 149.3333333333333%;
     background: url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
-        url(../img/KV_Bgimage-xs.png) no-repeat center bottom/100%;
-    background-color: #5845A1;
+        url(../img/KV_Bgimage-xs.png) no-repeat center bottom/100%,
+        #5845A1;
     position: relative;
 }
 
@@ -207,7 +209,7 @@ body {
     font-size: 16px;
 }
 
-.mission-content p span:nth-child(2){
+.mission-content p span:nth-child(2) {
     display: none;
 }
 
@@ -216,7 +218,7 @@ body {
     margin: auto;
 }
 
-.mission-content .mission-paragraph> div[class^=mission-paragraph] {
+.mission-content .mission-paragraph>div[class^=mission-paragraph] {
     display: block;
     width: 100%;
     margin-bottom: 15.75px;
@@ -242,9 +244,11 @@ body {
 
 .board-full {
     padding: 24.333333% 0 50%;
-    background: url(../img/Mission_TopClould_repeat.png)no-repeat top center/100%, url(../img/Mission_BgimageTop-xs.png) no-repeat top center/100%, url(../img/Notice_Bgimage-xs.png) no-repeat bottom center/100%,
-        url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px;
-    background-color: #5845A1;
+    background: url(../img/Mission_TopClould_repeat.png)no-repeat top center/100%,
+        url(../img/Mission_BgimageTop-xs.png) no-repeat top center/100%,
+        url(../img/Notice_Bgimage-xs.png) no-repeat bottom center/100%,
+        url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
+        #5845A1;
 
 }
 
@@ -287,12 +291,12 @@ body {
 }
 
 .board-list a .Hover-pic {
-   opacity: 0;
+    opacity: 0;
     transition: .3s;
 }
 
 .board-list a:hover .Hover-pic {
- opacity: 1;
+    opacity: 1;
 }
 
 .board-content>a {
@@ -404,8 +408,8 @@ body {
     .kv-full {
         padding-bottom: 63.33333333333333%;
         background: url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
-            url(../img/KV_Bgimage-lg.png) no-repeat center bottom/166.6666666666667%;
-        background-color: #5845A1;
+            url(../img/KV_Bgimage-lg.png) no-repeat center bottom/166.6666666666667%,
+            #5845A1;
     }
 
     .kv-full::before {
@@ -464,7 +468,7 @@ body {
         width: 30%;
         margin: auto;
     }
-  
+
 
     .mission-content p {
         margin-bottom: 0;
@@ -477,7 +481,7 @@ body {
         font-size: 22px;
     }
 
-    .mission-content p span:nth-child(2){
+    .mission-content p span:nth-child(2) {
         display: inline-block;
     }
 
@@ -489,10 +493,10 @@ body {
         display: flex;
     }
 
-    .mission-content .mission-paragraph > div[class^=mission-paragraph]{
+    .mission-content .mission-paragraph>div[class^=mission-paragraph] {
         width: 50%;
         margin-bottom: 0;
-     
+
     }
 
     .mission-content>span {
@@ -511,21 +515,153 @@ body {
 
 
 
+    .board-full {
+        padding: 16.66666666666667% 0 25%;
+        background: url(../img/Mission_TopClould_repeat.png)no-repeat top center/100%,
+            url(../img/Mission_BgimageTop-lg.png) no-repeat top center/100%,
+            url(../img/Notice_Bgimage-lg.png) no-repeat bottom center/100%,
+            url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
+            #5845A1;
+
+    }
+
+
+    .board-content .board-title {
+        margin: auto;
+        scroll-margin-top: 70px;
+        width: 58.33333333333333%;
+    }
+
+    .board-content .board-title picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .board-lists {
+        width: 100%;
+        padding-bottom: 125%;
+        height: 0;
+        background: url(../img/Mission_BgimageBody-lg.png) repeat-y center 0px /100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .board-list {
+        width: 90%;
+        margin: 0;
+        aspect-ratio: 0;
+    }
+
+    .board-list a {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1/1;
+        position: relative;
+        margin: auto;
+        transition: .3s;
+    }
+
+    .board-list a>* {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .board-html,
+    .board-css, 
+    .board-inline-block,
+    .board-align-center {
+        width: 50%;
+
+    }
+
+    .board-html,
+    .board-css {
+        margin-bottom: 16.3333333333%;
+    }
+    .board-inline-block,
+    .board-align-center {
+      height: auto;
+    }
+
+    .board-html a,
+    .board-css a,
+    .board-inline-block a{
+width: 70.83333333333333%;
+    }
+
+  
+    
+    .board-align-center a{
+        width: 83.3333333333%;
+    }
+
+    .board-position {
+        order: 1;
+        width: 33.3333333%;
+        margin-bottom: 0px;
+    }
+
+    .board-doubleF {
+        order: 2;
+        width: 33.3333333%;
+        margin-bottom: 0px;
+    }
+
+    .board-sizeCalc {
+        width: 33.3333333%;
+        margin-bottom: 0px;
+    }
+
+    .board-position a,
+    .board-doubleF a,
+    .board-sizeCalc a{
+width: 92.5%;
+    }
+
+    .board-sizeCalc,
+    .board-inline-block,
+    .board-align-center {
+        order: 3;
+    }
+
+
+    .board-css{
+       transform: translateY(12.5%);
+    }
+
+    
+    .board-doubleF{
+    transform: translateY(-16.25%);
+}
+.board-sizeCalc{
+    transform: translateY(-32.5%);
+}
 
 
 
+    .board-list a .Hover-pic {
+        opacity: 0;
+        transition: .3s;
+    }
 
+    .board-list a:hover .Hover-pic {
+        opacity: 1;
+    }
 
+    .board-list a:hover{
+        transform: translate(5px,5px);
+    }
 
-
-
-
-
-
-
-
-
-
+    .board-content>a {
+        display: block;
+        width: 33.33333333%;
+        margin: auto;
+    }
 
 
 
@@ -591,5 +727,15 @@ body {
             url(../img/KV_Rocket.png) no-repeat center bottom/200px;
 
         z-index: 1;
+    }
+
+    .board-full {
+        padding: 200px 0;
+        background: url(../img/Mission_TopClould_repeat.png)repeat-x top center/1200px,
+            url(../img/Mission_BgimageTop-lg.png) no-repeat top center/1200px,
+            url(../img/Notice_Bgimage-lg.png) no-repeat bottom center/100%,
+            url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
+            #5845A1;
+
     }
 }
