@@ -413,12 +413,12 @@ body {
     }
 
     .kv-full::before {
-        background-size: 83.33333333333333%;
+        background-size: 83.33333333%;
         height: 45%;
     }
 
     .kv-full::after {
-        background: url(../img/KV_RocketCloudWhite_repeat.png) repeat-x center bottom/83.33333333333333%,
+        background: url(../img/KV_RocketCloudWhite_repeat.png) repeat-x center bottom/83.33333333%,
             url(../img/KV_Rocket.png) no-repeat center bottom/16.66666%;
         z-index: 1;
         height: 55%;
@@ -732,7 +732,7 @@ width: 92.5%;
     .board-full {
         padding: 200px 0;
         background: url(../img/Mission_TopClould_repeat.png)repeat-x top center/1000px,
-            url(../img/Mission_BgimageTop-lg.png) no-repeat top center/1000px,
+            url(../img/Mission_BgimageTop-lg.png) no-repeat top center/1200px,
             url(../img/Notice_Bgimage-lg.png) no-repeat bottom center/100%,
             url(../img/Body_BgPoint_repeat.png) repeat left bottom/300px,
             #5845A1;
