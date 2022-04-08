@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/evenlisten.js" defer></script>
+    <title>迷那蛋糕</title>
+  </head>
+
+  <body>
+    <!-- (增加) 目前用js 控制手機板 當 <div class="main-nav"><div> 被點到後
+        <header class="main-header"></header> 增加 class：menu-switch 去顯示手機板的選單呈現，
+        如果沒有這個class Name，手機版選單會隱藏
+    -->
+    <header class="main-header">
+      <!-- (增加) 用bgdrop 去控制浮出的畫面(選單、搜尋、購物車)跑出來後，空白區域點即可關閉，此時空白區域 = bgdrop-->
+      <span class="bgdrop d-none"></span>
+      <div class="container-fluid">
+        <a href="index.html" class="logo">
+          <img src="./img/00.png" alt="迷那蛋糕" />
+        </a>
+        <div class="main-nav">
+          <a href="#">商品</a>
+          <a href="#">如何訂購</a>
+          <a href="#">關於迷那</a>
+          <a href="#">LINE</a>
+          <a href="#">Instagram</a>
+        </div>
+        <div class="wrap">
+          <a href="javascript:void(0)" title="搜尋" class="aSearch"
+            ><i class="fas fa-search"></i
+          ></a>
+          <!-- search-wrap標籤 在class + active 會顯示 ，拿掉active則關閉 -->
+          <div class="search-wrap">
+            <input type="search" name="search" placeholder="搜尋" />
+            <button class="search">go</button>
+          </div>
+          <a href="#"><i class="fas fa-comment"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#" class="shopping-Cart"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <!-- products標籤 在class + active 會顯示 ，拿掉active則關閉 -->
+          <div class="products">
+            <div class="header">購物車<i class="fas fa-times"></i></div>
+            <div class="product">
+              <div class="item">
+                <div class="img">
+                  <img src="https://picsum.photos/300/200/?random=10" />
+                </div>
+                <div class="description">
+                  <h2>奶茶小禮盒</h2>
+                  <span class="dolar">NT$ 500</span>
+                  <div class="count">
+                    <span class="minus">-</span>
+                    <span class="number">1</span>
+                    <span class="plus">+</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="https://picsum.photos/300/200/?random=10" />
+                </div>
+                <div class="description">
+                  <h2>自選小禮盒</h2>
+                  <span class="dolar">NT$ 500</span>
+                  <div class="count">
+                    <span class="minus">-</span>
+                    <span class="number">1</span>
+                    <span class="plus">+</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="https://picsum.photos/300/200/?random=10" />
+                </div>
+                <div class="description">
+                  <h2>檸檬塔</h2>
+                  <span class="dolar">NT$ 500</span>
+                  <div class="count">
+                    <span class="minus">-</span>
+                    <span class="number">1</span>
+                    <span class="plus">+</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <span>總計 NT$ 1050</span>
+              <button class="checkout">結帳</button>
+            </div>
+          </div>
+        </div>
+        <label for="menu-switch" class="menu-control">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="description">
+            下次開單時間
+            <span class="open-date">12/17(五) 21:00</span> ，開放<span
+              class="send-date"
+              >12/23</span
+            >宅配寄出
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="side-menu">
+            <div class="side">
+              <h2>商品分類</h2>
+              <a href="#">全部</a>
+              <a href="#">開單</a>
+              <a href="#">小塔</a>
+              <a href="#">磅蛋糕</a>
+              <a href="#">草莓</a>
+              <a href="#">彌月</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <div class="container-fluid">
+            <div class="row">
+              <!-- 這是一個商品區塊的組合，如果要新增一個商品，結構長這樣 -->
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=1">
+                    </div>
+                    <h2>彌月蛋糕|磅蛋糕|11盒</h2>
+                    <span>NT$ 4,000</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-3">
+                <!-- product-item 標籤 ，加上 sell-out 會顯示「售完」 -->
+                <div class="product-item sell-out">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=2">
+                    </div>
+                    <h2>彌月蛋糕|四入小塔禮盒|11盒</h2>
+                    <span>NT$ 4,800</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=3">
+                    </div>
+                    <h2>卡通小塔禮盒</h2>
+                    <span>NT$ 450</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=4">
+                    </div>
+                    <h2>香橙磅蛋糕 &lt;冬季限定&gt;</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=5">
+                    </div>
+                    <h2>奶茶小塔禮盒</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=6">
+                    </div>
+                    <h2>水晶小塔禮盒</h2>
+                    <span>NT$ 570</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=7">
+                    </div>
+                    <h2>小山園抹茶奶酥磅蛋糕</h2>
+                    <span>NT$ 430</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=8">
+                    </div>
+                    <h2>商品</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=9">
+                    </div>
+                    <h2>商品</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <h2>商品</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=11">
+                    </div>
+                    <h2>商品</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=12">
+                    </div>
+                    <h2>商品</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=13">
+                    </div>
+                    <h2>商品</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=14">
+                    </div>
+                    <h2>商品</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3">
+                <div class="product-item">
+                  <a href="./product.html">
+                    <div class="img">
+<img src="https://picsum.photos/300/200/?random=15">
+                    </div>
+                    <h2>商品</h2>
+                    <span>NT$ 500</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

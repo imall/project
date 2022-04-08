@@ -1,0 +1,412 @@
+/* layout.css 給導覽列、側邊選單使用，index.html；product.html 都會用到 */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* 全頁字型 */
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.main-header {
+    /* 導覽列背景色 */
+    background-color: #ef4f73;
+}
+
+.main-header .container-fluid{
+    align-items: center;
+}
+
+.main-header .logo {
+    width: 150px;
+}
+
+.main-header .logo img {
+    width: 100%;
+
+}
+
+#menu-switch {
+    display: none;
+}
+
+.main-header .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.main-header .container-fluid .main-nav {
+    display: flex;
+    flex-grow: 1;
+
+}
+
+.main-header a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px .5em;
+    /* 導覽列文字大小 */
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.main-header a:not(.logo):hover
+{
+    /* 導覽列hover之後的文字顏色 */
+    color: #eee;
+    /* 導覽列hover之後的背景顏色 ，後面的.2是不透明度*/
+    background-color: rgba(255,255,255,0.2);
+    
+}
+
+.main-header .wrap {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.main-header .wrap .products {
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #ccc;
+    z-index: 3;
+    border-radius: 5px;
+    top: 60px;
+    right: 10px;
+    display: none;
+}
+
+
+.main-header .wrap .search-wrap {
+    position: absolute;
+    top: 45px;
+    right: 100px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 3;
+}
+
+
+.main-header .wrap .search-wrap input {
+    border: none;
+    width: 200px;
+    /* 搜尋框文字大小 */
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 5px 0 0 5px;
+    display: inline-flex;
+}
+
+
+.main-header .wrap .search-wrap .search {
+    border: none;
+    outline: none;
+    padding-right: 10px;
+    background-color: #fff;
+    color: #000;
+    /* 搜尋按鈕文字大小(go 那個字) */
+    font-size: 14px;
+    border-radius: 0 5px 5px 0;
+}
+
+
+
+
+.main-header .wrap .products .header {
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    /* 購物車頁首文字大小 */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.main-header .wrap .products .header i {
+    cursor: pointer;
+}
+
+
+.main-header .wrap .products .product {
+    height: 400px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+
+.main-header .wrap .products .item {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding-right: 30px;
+
+}
+
+.main-header .wrap .products .item .img {
+    border-radius: 5px;
+    width: 180px;
+    height: 180px;
+}
+
+.main-header .wrap .products .item .img img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main-header .wrap .products .item .description {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header .wrap .products .item .description h2 {
+    /* 購物車商品名稱文字大小 */
+    font-size: 14px;
+}
+
+.main-header .wrap .products .description .dolar {
+    /* 購物車商品金額文字大小 */
+    font-size: 14px;
+    flex-grow: 1;
+    padding-bottom: 5px;
+}
+
+.main-header .wrap .products .description .count {
+    display: flex;
+    /* 購物車商品增加數量減少數量文字大小 */
+    font-size: 14px;
+}
+
+.main-header .wrap .products .description .count span {
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.main-header .wrap .products .description .count span+span {
+    border-left: none;
+}
+.main-header .wrap .products .description .count .number{
+    /* 購物車數量格子寬度 */
+    width: 30px;
+}
+
+.main-header .wrap .products .description .count span:nth-child(1),
+.main-header .wrap .products .description .count span:nth-child(3) {
+    cursor: pointer;
+    /*  購物車商品加減號寬度 */
+    width: 20px;
+}
+
+.main-header .wrap .products .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 購物車總計金額、「結帳」文字大小 */
+    font-size: 14px;
+}
+
+.main-header .wrap .products .footer .checkout {
+    border: none;
+    outline: none;
+    /* 購物車結帳按鈕長寬 */
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    /* 購物車結帳按鈕背景色 */
+    background-color: #ef4f73;
+    color: #fff;
+}
+
+.active {
+    display: flex !important;
+}
+
+/* ===================== */
+
+.container .row .description {
+    line-height: 50px;
+    padding: 0 20px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    /* 下次開單時間文字大小 */
+    font-size: 13px;
+    /* 下次開單背景色 */
+    background-color: #f7f7f8;
+    /* 下次開單文字顏色 */
+    color: #303030;
+}
+
+/* ===================== */
+
+.side h2 {
+    padding: 10px;
+    font-weight: bold;
+    /* 側邊選單「商品分類」文字大小 */
+    font-size: 18px;
+    color: #303030;
+}
+
+.side a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    /* 側邊選單選項文字大小 */
+    font-size: 14px;
+    color: #808080;
+}
+
+.side a:hover{
+    /* 側邊導覽列hover之後的背景色 */
+    background-color:rgba(230, 230, 230, 0.2);
+}
+
+.container .container-fluid {
+    padding-top: 10px;
+}
+
+/* (增加) +bgdrop控制器 */
+.bgdrop{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* 
+    控制背景色，目前是半透明黑色 
+    也可以設定為 transparent (透明)
+    */
+    background-color: #5551;
+}
+
+
+@media screen and (max-width:769px) {
+
+    .container .row .description {
+        margin: 10px 0px;
+    }
+    .main-header .wrap .products {
+        width: auto;
+        padding: 15px 25px;
+        height: 390px;
+    }
+    .main-header .wrap .products .header {
+        margin-bottom: 0;
+    }
+    .main-header .wrap .products .product .item {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-header .wrap .products .product .item .img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .main-header .wrap .products .footer span {
+        font-size: 14px;
+    }
+
+    .main-header .wrap .search-wrap {
+        right: 128px;
+    }
+
+    .menu-control {
+        margin-top: 2px;
+        margin-left: 8px;
+        width: 20px;
+        height: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu-control span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 3px;
+    }
+
+    .main-header .container-fluid .main-nav {
+        display: none;
+    }
+
+
+    /*(增加) 這裡開始 ，CSS寫法更改 */
+    .menu-switch.main-header .container-fluid .main-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 50vw;
+        top: 100%;
+        /* 小裝置nav背景顏色 */
+        background-color: rgb(252, 249, 249);
+        right: 10px;
+        z-index: 3;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 1px #ccc;
+
+    }
+
+    .menu-switch.main-header .container-fluid .main-nav a {
+        padding-bottom: 5px;
+        color: #000;
+
+    }
+
+    .menu-switch.main-header .container-fluid .main-nav .search {
+        margin-left: 0px;
+    }
+
+    .menu-switch.main-header .container-fluid .main-nav a:hover {
+        /* 導覽列標籤，滑鼠觸摸後顯示的顏色 */
+        background-color: #eee;
+
+    }
+
+    .menu-switch.main-header .container-fluid {
+        justify-content: stretch;
+    }
+
+    /* 這裡結束 ，CSS寫法更改 */
+
+
+}
+
+@media screen and (max-width:575px) {
+    .side-menu .side {
+        display: flex;
+        padding-left: 10px;
+    }
+
+    .main-header .wrap .search-wrap{
+        top: 48px;
+        left: 20%;
+        right: 20%;
+        justify-content: space-between;
+    }    
+    .main-header .wrap .search-wrap input{
+        width: 0;
+        flex-grow: 1;
+
+    }
+}
