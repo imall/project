@@ -4,7 +4,22 @@ let aSearch = document.querySelector(".aSearch")
 let menuControl = document.querySelector(".menu-control")
 let mainHeader = document.querySelector(".main-header")
 let bgDrop = document.querySelector(".bgdrop")
+let smallPictures = document.querySelectorAll(".img")
+let shows =document.querySelectorAll(".carousel-item")
+let myCarousel = document.querySelector('#carouselControls')
 
+
+smallPictures.forEach(smallPicture => {
+    smallPicture.addEventListener('click',(e)=>{
+        shows.forEach((show)=>{
+            if(show.dataset.pic==smallPicture.dataset.pic){
+                show.classList.add('active')
+            }else{
+                show.classList.remove("active")
+            }
+        })
+    })
+});
 
 shoppingCar.addEventListener("click", () => {
     // 控制購物車show出來後 bgdrop 要顯示 (所以remove display:none )
