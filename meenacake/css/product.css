@@ -142,6 +142,10 @@
     background-color: #ccc;
 }
 
+.product-order button  i{
+    color: #ccc;
+}
+
 .product-introduction h2 {
     /* 底下商品介紹顏色、字體大小 */
     font-size: 18px;
