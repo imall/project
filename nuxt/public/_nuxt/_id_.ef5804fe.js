@@ -1,0 +1,1 @@
+import{a as t,o as a,b as s,e as o,t as r,u as n}from"./entry.33323da0.js";const _={__name:"[id]",setup(u){const e=t();return(c,l)=>(a(),s("div",null,[o("h1",null,"\u52D5\u614B\u7DB2\u5740:"+r(n(e).path),1)]))}};export{_ as default};
