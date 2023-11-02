@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docgen 專案連結</title>
+    <style>
+        .atags {
+            margin: auto;
+            width: 100%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .atags h1 {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        body,
+        a,
+        pre {
+            color: #000;
+            border-color: #000;
+            background-color: #fff;
+            transition: .5s;
+        }
+
+        .dark-mode-color {
+            color: #c9d1d9;
+            border-color: #c9d1d9;
+            background-color: #010409;
+            transition: .5s;
+        }
+
+
+
+        .atags fieldset a.first,
+        .atags fieldset {
+            border: 2px solid;
+        }
+
+        .atags fieldset a {
+            display: inline-block;
+            border: 1px solid;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            text-decoration: none;
+
+        }
+
+
+        .atags fieldset a.first {
+            font-weight: bold;
+        }
+
+        .atags fieldset a:hover {
+            background-color: rgb(235, 235, 235);
+        }
+
+        .atags fieldset a:active {
+            box-shadow: 3px 3px rgb(138, 138, 138) inset;
+
+        }
+
+        .atags fieldset a.dark-mode-color:hover {
+            background-color: #010409;
+        }
+
+        .atags fieldset a.dark-mode-color:active {
+            box-shadow: none;
+        }
+
+        .atags fieldset {
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .atags fieldset legend {
+            font-weight: bold;
+        }
+
+        .atags fieldset pre {
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 5px;
+            width: 650px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dark-mode {
+            position: fixed;
+            top: 30px;
+            left: 60px;
+        
+          
+        }
+
+
+        span {
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 80px;
+            position: relative;
+            /* box-shadow: -5px -5px #ccc inset; */
+            cursor: pointer;
+            background: url('./下載.jpg') no-repeat  right /contain ;
+            background-color: #fff;
+            transition: .5s;
+        }
+
+        span::before {
+            content: "";
+            width: 40px;
+            height: 100%;
+            border-radius: 80px;
+            background-color: #aaa;
+
+            position: absolute;
+            transition: .5s;
+            right: 40px;
+
+        }
+
+        .chbox:checked+span::before {
+            right: 0;
+
+        }
+
+        .chbox:checked+span {
+            transition: .5s;
+            right: 0;
+            /* box-shadow: 5px -5px #ccc inset; */
+            background: url('./下載2.jpg') no-repeat  left / contain ;
+            background-color: #fff;
+        }
+
+        .chbox {
+            position: relative;
+            left: -99px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="atags">
+        <h1>EIS Docgen 專案相關路徑</h1>
+        <fieldset>
+            <legend>EIS:</legend>
+            <a class="first" target="_blank" href="http://ibm06hot2app02.ibm06.hotai.info:8080/hot-app/">EIS
+                Cloud App02</a>
+            <a target="_blank"
+                href="http://hqeapls02.hotains.com.tw:8080/hot-app/login.xhtml?logout=1&local=true#noback">EIS SIT</a>
+            <a target="_blank" href="https://hqeaplu03.hotains.com.tw/hot-app/login.xhtml#noback">EIS UAT</a>
+
+            <a class="first chinese" target="_blank"
+                href="https://hqeaplp03.hotains.com.tw/hot-app/login.xhtml#noback">EIS 正式環境</a>
+        </fieldset>
+
+        <fieldset>
+            <legend>EIS Swagger:</legend>
+            <div class="container">
+                <div class="row">
+                    <div class="cloud">
+                        <a target="_blank"
+                            href="http://ibm06hot2app02.ibm06.hotai.info:8180/hot-gateway/core/swagger/index.html">EIS
+                            Cloud
+                            DXP</a>
+                        <a target="_blank"
+                            href="https://ibm6-hot2-app02.eisgroup.com/hot-app/swagger-ui.xhtml#!/default/createTask">EIS
+                            Cloud
+                            Core</a>
+                    </div>
+                    <div class="sit">
+                        <a target="_blank"
+                            href="http://hqeapls01.hotains.com.tw:8180/hot-gateway/core/swagger/index.html">EIS
+                            SIT DXP</a>
+                        <a target="_blank" href="http://hqeapls02.hotains.com.tw:8080/hot-app/swagger-ui.xhtml">EIS SIT
+                            Core</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="uat">
+                        <a target="_blank"
+                            href="https://hqeaplu01.hotains.com.tw/hot-gateway/core/swagger/index.html">EIS UAT
+                            DXP</a>
+                        <a target="_blank" href="https://hqeaplu03.hotains.com.tw/hot-app/swagger-ui.xhtml">EIS UAT
+                            Core</a>
+                    </div>
+
+
+                    <div class="prod">
+                        <a target="_blank" class="first"
+                            href="https://hqeaplp01.hotains.com.tw/hot-gateway/core/swagger/index.html">EIS prod
+                            DXP</a>
+                        <a target="_blank" class="first"
+                            href="https://hqeaplp03.hotains.com.tw/hot-app/swagger-ui.xhtml">EIS prod
+                            Core</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <a target="_blank" class="chinese"
+                href="https://uat-eis.ins3rd.tw/eaitoeis/swagger/index.html?url=/eaitoeis/swagger/v1/swagger.json">中繼API</a>
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>AEM:</legend>
+            <a target="_blank" href="http://192.168.152.14:4502">AEM Cloud</a>
+            <a target="_blank" href="http://192.168.115.176:4502">AEM SIT</a>
+            <a target="_blank" href="http://192.168.135.137:4502">AEM UAT</a>
+            <a target="_blank" href="http://192.168.148.137:4502">AEM PROD</a>
+        </fieldset>
+
+        <fieldset>
+            <legend>SQL:</legend>
+            <a class="first" target="_blank" href="https://ibm6-hot2-app02.eisgroup.com/hot-app/Console.jsp">EIS SQL</a>
+            <pre>select
+CAST(BYTES_ as xml) datasource 
+from
+EPB_OP_DOCGEN_DATASOURCE 
+where
+docgenTicket in (
+select
+docgenTicket
+from
+ 　EPB_OP_DOCGEN_HISTORY
+ WHERE 
+ entityRefNo = 'M0004116'  --Policy:policy number/Claim:claim number/Customer:customer number
+);</pre>
+            <pre>update PolicySummary set quoteExpirationDate = '2021-08-01' where policyNumber = 'M0004470';</pre>
+
+        </fieldset>
+
+
+
+    </div>
+
+    <label for="dark">
+        <input type="checkbox" id="dark" class="chbox">
+        <span class="dark-mode" id=""></span>
+    </label>
+    <!-- <input type="button" class="dark-mode" value="模式切換"> -->
+    <script>
+        console.log("Step 3")
+        let time = parseInt(new Date().getTime().toString().substr(0, 10)) + 864000
+        console.log(`dxp|${time}`)
+        console.log("v0yp7MClE8Nd81Uhu6V@MOp4_HcH1npJK0JVuZIoEBG_hr>/mnlsX_<Z>Aqw1z:u")
+        console.log('step5');
+        console.log('dxp');
+        console.log('Hot$2@q!X');
+
+
+        let mode = document.querySelector(".dark-mode")
+        let atag = document.querySelectorAll("a");
+        let pre = document.querySelectorAll("pre")
+
+        mode.addEventListener("click", () => {
+            atag.forEach(element => {
+                element.classList.toggle("dark-mode-color")
+            })
+
+            pre.forEach(element => {
+                element.classList.toggle("dark-mode-color")
+            })
+            document.querySelector("body").classList.toggle("dark-mode-color")
+        })
+
+    </script>
+
+</body>
+
+</html>
